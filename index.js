@@ -631,7 +631,6 @@ function employeeByDepartment(department){
             }
         }
 
-        //have to join table
 
         const query =
         `SELECT CONCAT(employee.first_name,' ',employee.last_name) as Name, roles.title as title, roles.department_id as department_id
@@ -675,8 +674,6 @@ function deleteDepartment(department){
                 departmentID = department[i].id
             }
         }
-
-        //have to join table
 
         const query =
         `DELETE FROM department WHERE id = ?;`
